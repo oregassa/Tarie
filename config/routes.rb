@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :items
-  root 'items#index'
+  devise_for :users
+  resources  :items do 
+  	member do
+  	  patch :complete # The verb patch is for delet. this refer to the complete method in the item_controller.
+  	end
+  end
+  root             'items#index'
+  get 'home', to:  'pages#home'
 end
 
 

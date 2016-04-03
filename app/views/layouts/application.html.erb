@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style> 
+    a:link, a:visited {
+	text-decoration: none;
+}
+</style>
 
   <title>Tarie</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,7 +19,9 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-<%= yield %>
-
+<%= render 'layouts/navbar' %> 
+<div class='contain'>
+  <%= yield %>
+</div>
 </body>
 </html>

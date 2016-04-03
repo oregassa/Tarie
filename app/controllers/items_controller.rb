@@ -1,18 +1,22 @@
 class ItemsController < ApplicationController
 	before_action :setup_item, only: [:edit, :show, :update, :destroy]
+    before_action :authenticate_user!, except: [:index]
+
 
    	def index
-	  @items = Item.all
-	end
+   	  if user_signed_in?
+        @items = Item.where(:user_id => current_user.id).order('created_at DESC')
+	  end
+    end
 
 
 	def new
-	  @item = Item.new
+	  @item = current_user.items.build
 	end
 
 
 	def create
-	  @item = Item.new(item_params)
+	  @item = current_user.items.build(item_params)
 
 	  if @item.save 
 	  	flash[:success] = 'Item has been crated'
@@ -24,20 +28,16 @@ class ItemsController < ApplicationController
 
 
 	def show
-	  @item = Item.find(params[:id])
 	end
 
 
 
 	def edit
-	  @item = Item.find(params[:id])
 	end
 
 
 
 	def update
-	  @item = Item.find(params[:id])
-
       if @item.update(item_params)
 	    flash[:danger] = 'Item has been updated'
 	  	redirect_to item_path(@item)
@@ -49,8 +49,6 @@ class ItemsController < ApplicationController
 
 
 	def destroy
-	  @item = Item.find(params[:id])
-
 	  if @item.destroy 
 	    flash[:danger] = 'Item has been removed'
 	  	redirect_to root_path
@@ -59,7 +57,18 @@ class ItemsController < ApplicationController
 	  end
 	end
 
-
+	def complete
+	  @item = Item.find(params[:id])
+	  @item.update_attribute(:completed_at, Time.now)
+	  # Take the item, when call the complete
+	  # method, it'll update the completed_at value, which
+	  # will have a nil value until it's completed and
+	  # it'll update it of the current time.
+	  redirect_to root_path
+	  # To define what (complete) is go in the item method.
+	  # Then make a route fo it
+	end
+    
 
 	private 
 

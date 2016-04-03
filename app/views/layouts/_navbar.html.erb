@@ -1,0 +1,22 @@
+<nav class="nav">
+  <div class="user_nav">
+    <div class='logo'>
+      <%= link_to 'TARIE', root_path %>
+    </div>
+
+    <div class='all-items'>
+      <%= link_to items_path do %>  
+      <i class='fa fa-lg fa-eye'></i> |
+      <% end %>
+    </div>
+
+    <div class='new-items'><%= link_to "Add A New Item", new_item_path%> |
+    </div>
+    <% if user_signed_in? %>
+  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> 
+    <% else %>
+  <%= link_to 'Sign In', new_user_session_path %> 
+  | <%= link_to 'Sign Up', new_user_registration_path %> 
+  </div>
+  <% end %>
+</nav>

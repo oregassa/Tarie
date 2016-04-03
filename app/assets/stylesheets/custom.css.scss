@@ -1,4 +1,183 @@
 @import "bootstrap-sprockets";
 @import "bootstrap"; 
 
- 
+
+html {
+    background-color: white;
+    color: #919191;
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+
+
+
+
+
+
+/* nav bar */
+
+.nav {
+	width: 100%;
+	height: 20px;
+	border-bottom:1px solid #e7e7e7;
+	float: right;
+	margin-bottom: 40px;
+}
+
+.nav, a:link {
+    text-decoration: none;
+}
+
+.user_nav {
+	float: right;
+	margin: 0 5% 0 0;
+}
+
+
+.logo {
+	float: left;
+	margin-right: 450px;
+}
+
+.all-items {
+	float: left;
+	margin-right: 8px;
+}
+
+.new-items {
+	float: left;
+	margin-right: 8px;
+}
+
+
+
+
+
+
+
+
+
+/* index page */
+
+.item-box {
+	margin: auto;
+	border: 1px solid #e7e7e7;
+    border-radius: 25px;
+	padding: 10px;
+	width: 60%;
+	text-align: center;
+	margin-top: 40px;
+	font-family: fantasy;
+}
+
+
+.item-links {
+	float: right;
+	margin: -85px 10px 5px 4px;
+}
+
+
+.item-edit {
+    color: Green;
+    font-weight: bold;
+    margin: 5px;
+}
+
+
+
+.item-complete {
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+
+}
+
+
+
+.item-delete {
+    color: red;    
+    font-weight: bold;
+    margin: 5px;
+}
+
+
+
+
+/* completed box */
+
+.completed-item-box {
+	margin: 10px;
+	padding: 10px;
+}
+
+
+/* non user */
+
+.home-page {
+	text-align: center;
+}
+
+
+.sign-up {
+    border: 1px solid gray;
+    background-color: deepskyblue;
+    border-radius: .5em;
+    padding: 5px;
+    float: left;
+    margin: 0 595px 10px;
+}
+
+
+.log-in {
+    border: 1px solid gray;
+    background-color: deepskyblue;
+    border-radius: .5em;
+    padding: 5px;
+    float: left;
+    margin: 0 600px;
+}
+
+
+
+/* sign up*/
+
+
+.user-signup {
+	text-align: center;
+}
+
+
+
+
+
+/* sign in */
+
+.user-login {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
