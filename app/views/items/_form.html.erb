@@ -1,13 +1,20 @@
+<div class='item-form'>
+  <%= form_for @item do |f| %>
+      <div class='new-title-box'>
+        <%= f.text_field :title, placeholder: 'Title' %>
+      </div>
+ 
+      <div class='new-desc-box'>
+        <%= f.text_area :description, placeholder: 'Task' %>
+      </div>
+   
 
-<%= form_for @item do |f| %>
-  <%= f.label :title %><br>
-  <%= f.text_field :title, placeholder: 'Item' %>
-
-  <%= f.label :description %><br>
-  <%= f.text_area :description %>
-
-  <%=  f.submit %>
+      <div class='new-submit'>
+        <%=  f.submit %>
+      </div>
 <% end %>
+</div> 
+
 
 
  

@@ -1,3 +1,4 @@
+<div class="container">
 <h1 align="center">All Items</h1>
 
 <% if user_signed_in? %>
@@ -6,7 +7,7 @@
 
   <div class="completed-item-box"> 
         <div class="completed-item-title">
-          <h2 style='opacity: 0.4'><strike><%= link_to item.title, item_path(item) %></strike></h2>
+          <h2 style='opacity: 0.4'><del><%= link_to item.title, item_path(item) %></del></h2>
         </div>
         <p class="completed-item-description">
           <p style='opacity: 0.4'><%= item.description %></p>
@@ -64,7 +65,7 @@
   <% else %>
   <%= render 'pages/none_user' %>
 <% end %>
-
+</div>
 
 
 

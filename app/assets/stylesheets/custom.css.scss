@@ -2,17 +2,40 @@
 @import "bootstrap"; 
 
 
-html {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+h1, html {
     background-color: white;
     color: #919191;
     font-family: monospace;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 50px;
     text-rendering: optimizeLegibility;
 }
 
 
 
+
+
+
+/* footer */
+
+.footer {
+   border-top: 1px solid #e7e7e7;
+   text-align: center;
+   color: green;
+   padding:5px;	
+   clear:both; 	
+   background-color: lightgray; 
+}
 
 
 
@@ -41,7 +64,7 @@ html {
 
 .logo {
 	float: left;
-	margin-right: 450px;
+	margin-right: 900px;
 }
 
 .all-items {
@@ -76,11 +99,6 @@ html {
 }
 
 
-.item-links {
-	float: right;
-	margin: -85px 10px 5px 4px;
-}
-
 
 .item-edit {
     color: Green;
@@ -108,12 +126,22 @@ html {
 
 
 
+
+
+
+
+
 /* completed box */
 
 .completed-item-box {
 	margin: 10px;
 	padding: 10px;
 }
+
+
+
+
+
 
 
 /* non user */
@@ -144,12 +172,18 @@ html {
 
 
 
+
+
+
+
 /* sign up*/
 
 
 .user-signup {
 	text-align: center;
 }
+
+
 
 
 
@@ -162,6 +196,40 @@ html {
 }
 
 
+
+
+
+
+
+/* new, edit items */
+
+.new-item {
+    text-align: center;
+}
+
+
+.new-desc-box {
+	margin-top: 30px;
+}
+
+
+
+.new-desc-label {
+	margin: 30px 0 -30px 0;
+}
+
+
+
+.new-submit {
+    margin: 0 0 40px 0;
+    color: Green;
+}
+
+
+
+.edit-item {
+    text-align: center;
+}
 
 
 
